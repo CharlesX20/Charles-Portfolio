@@ -253,24 +253,14 @@ header ul a:hover{
         background-position: 200%;
     }
 }
-
 .skills-video-box{
     position: absolute;
-    right: clamp(1rem, 3vw, 3%);
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    height: min(37.5rem, 70vh);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    right: 3%;
 }
 
 .skills-video{
-    height: 100%;
-    max-height: 31.25rem;
-    mix-blend-mode: lighten;
-    border-radius: 0.9375rem;
+    height: 900px;
+    mix-blend-mode:lighten;
 }
 
 .scroll-down {
@@ -1064,6 +1054,8 @@ header ul a:hover{
     }
 }
 
+
+
 /* ===== RESPONSIVE MEDIA QUERIES ===== */
 
 /* Large Tablets and Small Laptops - Hamburger at 1024px */
@@ -1451,4 +1443,13 @@ header ul a:hover{
         width: 100%;
         height: auto;
     }
+}
+
+/* disable heavy animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
