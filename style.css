@@ -897,7 +897,7 @@ header ul a:hover{
 
 /* ===== CAREFULLY APPLIED ANIMATIONS ===== */
 /* Only apply autoBlur to elements that should have it */
-.hero-info.autoBlur,
+/* .hero-info.autoBlur,
 .project-vidbox.autoBlur,
 .social-box.autoBlur,
 .contact-box.autoBlur {
@@ -952,7 +952,7 @@ header ul a:hover{
     }100%{
         filter: blur(0.625rem);
     }
-}
+} */
 
 /* ===== SIDEBAR - FIXED ===== */
 .sidebar{
