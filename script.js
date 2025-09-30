@@ -16,24 +16,53 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Form success message
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Show loading state
+        submitBtn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        try {
+            const formData = new FormData(this);
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = '<i class="bx bx-check"></i> Message Sent!';
-            submitBtn.style.background = '#4CAF50';
+            if (response.ok) {
+                submitBtn.innerHTML = '<i class="bx bx-check"></i> Message Sent!';
+                submitBtn.style.background = '#4CAF50';
+                this.reset();
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            } else {
+                throw new Error('Failed to send');
+            }
+        } catch (error) {
+            submitBtn.innerHTML = '<i class="bx bx-error"></i> Failed to Send';
+            submitBtn.style.background = '#f44336';
             
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.style.background = '';
-                this.reset();
+                submitBtn.disabled = false;
             }, 3000);
-        });
-    }
+        }
+    });
+}
 });
 
 // Smooth scroll function
