@@ -694,6 +694,11 @@ header ul a:hover{
     z-index: 10;
 }
 
+.email-link {
+    word-break: break-all;
+    white-space: normal;
+}
+
 .social-box {
     flex: 1;
     display: flex;
@@ -953,6 +958,17 @@ header ul a:hover{
         filter: blur(0.625rem);
     }
 } */
+
+/* Current animation*/
+.card, .project-card, .skills-box {
+    will-change: transform, opacity; /* Performance boost */
+}
+
+/* Optional: Add a subtle glow on hover */
+.card:hover, .project-card:hover {
+    box-shadow: 0 0 30px var(--secondary-color) !important;
+    transform: translateY(-10px) scale(1.02) !important;
+}
 
 /* ===== SIDEBAR - FIXED ===== */
 .sidebar{
