@@ -446,8 +446,8 @@ header ul a:hover{
     align-items: center;
     position: relative;
     width: min(90%, 75rem);
-    margin-top: 12.5rem;
-    margin-bottom: 43.75rem;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
 }
 
 .project-card {
@@ -472,17 +472,19 @@ header ul a:hover{
     min-width: min(25rem, 90%);
 }
 
-.project-vidbox video{
-    object-fit: cover;
+/* Add this for project images */
+.project-image {
     width: 100%;
-    height: 18.75rem;
-    box-shadow: 0 0 0.625rem lightgray;
-    border-radius: 1.25rem;
-    transition: 0.5s;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px lightgray;
 }
 
-.project-card video:hover{
-    box-shadow: 0 0 1.5625rem var(--secondary-color);
+.project-vidbox:hover .project-image {
+    box-shadow: 0 0 25px var(--secondary-color);
+    transform: scale(1.05);
 }
 
 .project-info{
@@ -679,7 +681,7 @@ header ul a:hover{
 
 .contact-section h1{
     position: absolute;
-    top: -1rem;
+    top: -5rem;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -1120,7 +1122,7 @@ header ul a:hover{
     }
 
     .my-project{
-        margin-bottom: 25rem;
+        margin-bottom: 8rem;
     }
 
     .contact-section{
@@ -1231,7 +1233,7 @@ header ul a:hover{
     }
 
     .my-project{
-        margin-bottom: 18.75rem;
+        margin-bottom: 6rem;
         gap: 4rem;
     }
 
@@ -1300,7 +1302,6 @@ header ul a:hover{
     .contact-section h1{
         position: relative;
         top: auto;
-        left: auto;
         margin-bottom: 2rem;
     }
 
