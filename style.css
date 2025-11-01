@@ -490,10 +490,6 @@ header ul a:hover{
     box-shadow: 0 0 10px lightgray;
 }
 
-.project-vidbox:hover .project-image {
-    box-shadow: 0 0 25px var(--secondary-color);
-    transform: scale(1.05);
-}
 
 .project-info{
     display: flex;
