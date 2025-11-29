@@ -158,9 +158,9 @@ Git • Vercel • Render • Cloudinary • API Integration • Responsive Desi
 
 I'm always excited to discuss new opportunities, collaborations, or technical challenges. Let's build something amazing together!
 
-**📧 Email:** [your.email@domain.com](mailto:chimecharles23@gmail.com)  
+**📧 Email:** [chimecharles23@gmail.com](mailto:chimecharles23@gmail.com)  
 **💻 GitHub:** [github.com/charlesx20](https://github.com/charlesx20)  
-**🌐 Portfolio:** [your-portfolio.com](https://charlescoolportfolio.onrender.com)
+**🌐 Portfolio:** [charlescoolportfolio](https://charlescoolportfolio.onrender.com)
 
 ---
 
