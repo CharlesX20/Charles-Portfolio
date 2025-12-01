@@ -340,10 +340,10 @@ header ul a:hover{
 
 .info-cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: auto auto; /* 2 rows */
     gap: 1.25rem;
     width: 100%;
-    height: 100%;
     margin-top: 1.875rem;
 }
 
@@ -354,13 +354,40 @@ header ul a:hover{
     justify-content: flex-start;
     position: relative;
     width: 100%;
-    min-height: 25rem;
     overflow: hidden;
     border: 0.0625rem solid rgba(128, 128, 128, 0.5);
     background: var(--additional-color);
     border-radius: 1.25rem;
     transition: 0.5s;
     padding: 2rem;
+}
+
+/* About Me card - takes full height on left */
+.card:nth-child(1){
+    grid-row: span 2; /* Takes both rows */
+    grid-column: 1;   /* First column */
+    min-height: 51.875rem; /* Full height */
+}
+
+/* Tech Stack card - top middle */
+.card:nth-child(2){
+    grid-row: 1;
+    grid-column: 2;
+    min-height: 25rem;
+}
+
+/* Flexible card - bottom middle and right */
+.card:nth-child(3){
+    grid-row: 2;
+    grid-column: 2 / span 2; /* Spans columns 2 and 3 */
+    min-height: 25rem;
+}
+
+/* Passion card - top right */
+.card:nth-child(4){
+    grid-row: 1;
+    grid-column: 3;
+    min-height: 25rem;
 }
 
 .card:hover{
@@ -425,31 +452,21 @@ header ul a:hover{
     transform: translateY(-0.125rem);
 }
 
-/* Your Original Grid Structure */
-.card:nth-child(3){
-    grid-row: span 2;
-    min-height: 51.875rem;
+/* Adjust images in merged cards */
+.card:nth-child(2) img,
+.card:nth-child(3) img,
+.card:nth-child(3) video,
+.card:nth-child(4) img,
+.card:nth-child(4) video {
+    height: 18.75rem; /* Slightly smaller for merged cards */
 }
 
-.card:nth-child(3) p{
+/* Ensure About Me content fills the space */
+.card:nth-child(1) p {
     margin-bottom: 2rem;
+    flex-grow: 1;
 }
 
-.card:nth-child(3) h1{
-    margin-bottom: 1rem;
-}
-
-.card:nth-child(4){
-    grid-column: span 2;
-}
-
-.card:nth-child(4) p{
-    max-width: 100%;
-}
-
-.card:nth-child(4) h1{
-    margin-bottom: 1rem;
-}
 
 /* ===== PERFECT PROJECTS SECTION ===== */
 .my-project{
@@ -471,6 +488,7 @@ header ul a:hover{
     gap: clamp(3rem, 5vw, 10%);
     justify-content: center;
     min-height: 25rem;
+    padding: 2rem;
 }
 
 .project-vidbox{
@@ -1134,6 +1152,25 @@ header ul a:hover{
         min-height: 37.5rem;
     }
 
+    .info-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Reset grid positions on tablet */
+    .card:nth-child(1),
+    .card:nth-child(2),
+    .card:nth-child(3),
+    .card:nth-child(4) {
+        grid-row: auto;
+        grid-column: auto;
+        min-height: 25rem;
+    }
+    
+    .card:nth-child(3),
+    .card:nth-child(4) {
+        grid-column: span 2;
+    }
+
     .info-cards .card h1{
         font-size: 1.5rem;
     }
@@ -1345,6 +1382,13 @@ header ul a:hover{
     }
 }
 
+/* Added for tablet responsiveness in project section */
+@media screen and (max-width: 850px) {
+    .project-card{
+        flex-wrap: wrap;
+    }
+}
+
 /* Mobile Phones */
 @media screen and (max-width: 30rem) {
     .hero .skills-video-box {
@@ -1455,6 +1499,7 @@ header ul a:hover{
         gap: 0.9375rem;
     }
 }
+
 
 /* Background Video Aspect Ratio */
 @media (max-aspect-ratio: 16/9){
