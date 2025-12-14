@@ -82,6 +82,20 @@ Git • Vercel • Render • Cloudinary • API Integration • Responsive Desi
 
 ---
 
+### 🐿️ Pet Store E-commerce
+*Secure digital commerce platform built with ASP.NET Core*
+
+**Tech Stack:** C#, ASP.NET Core MVC, SQL Server, Stripe, Azure  
+**Highlights:**
+- Secure checkout process utilizing Stripe Payment integration
+- Multiple authentication providers (Google, GitHub) via ASP.NET Identity
+- Real-time cart updates using AJAX requests for a seamless UX
+- Persistent backend data management powered by SQL Server and Entity Framework Core
+
+**🔗 Live Demo:** [Pet Store](https://charleshiddensquirrel.runasp.net/)
+
+---
+
 ### 🎬 Movie Streaming App
 *Modern streaming platform with intelligent features*
 
@@ -93,6 +107,20 @@ Git • Vercel • Render • Cloudinary • API Integration • Responsive Desi
 - Fully responsive design
 
 **🔗 Live Demo:** [Chuckles Movies](https://chucklesmovies.onrender.com/)
+
+---
+
+### ⚡ FlashType Typing Practice
+*Advanced typing application with real-time analytics*
+
+**Tech Stack:** HTML5, CSS3, Vanilla JavaScript  
+**Highlights:**
+- Real-time WPM and accuracy tracking with animated progress bar
+- 6 languages with 4 difficulty levels each (Easy to Expert)
+- Customizable themes with dark/light mode support
+- Celebration system with confetti animations upon completion
+
+**🔗 Live Demo:** [Flash Type](https://flashtype.onrender.com/)
 
 ---
 
